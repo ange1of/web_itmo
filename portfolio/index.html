@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+  <html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Иван Ангелов</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+      <header>
+        <img src="images/my_photo.jpg" alt="Это я" width="200px" height="200px">
+        <h1>Иван Ангелов</h1>
+        <h4>Junior Web-разработчик, студент 3 курса</h4>
+        <aside>
+          <a href="https://t.me/ange1of">
+            <img src="images/contacts_telegram.png" alt="Telegram" width="30px" height="30px">
+          </a>
+          <a href="https://vk.com/ange1of">
+            <img src="images/contacts_vk.png" alt="VK" width="30px" height="30px">
+          </a>
+          <a href="https://github.com/ange1of">
+            <img src="images/contacts_github.png" alt="Github" width="30px" height="30px">
+          </a>
+          <a href="https://www.linkedin.com/in/ivan-angelov-5674671b5/">
+            <img src="images/contacts_linkedin.png" alt="LinkedIn" width="30px" height="30px">
+          </a>
+        </aside>
+      </header>
+      <main>
+        <!-- Skills -->
+        <section>
+          <h2>Знания и навыки</h2>
+          <ul>
+            <li>
+              <p>
+                Web: HTML, CSS, JavaScript, клиент-серверное взаимодействие. 
+                Другие языки программирования: С#, Python, С++.
+              </p>
+            </li>
+            <li>
+              <p>Знаком с фреймворками React, Angular, Svelte, Express.
+                На базовом уровне разбираюсь в методологии БЭМ.
+              </p>
+            </li>
+            <li>
+              <p>Работал с базами данных Postgres, MS SQL, sqlite. 
+                А также с docker, немного с микросервисами и СМЭВ (госуслугами).
+              </p>
+            </li>
+            <li>
+              <p>Знаю принципы и паттерны проектирования.</p>
+            </li>
+          </ul>
+        </section>
+        <!-- Code -->
+        <section>
+          <h3>Пример моего кода</h3>
+          <article>
+            <code>
+              <pre>
+                def translit_recursive(prefix, rest_part):
+        # prefix - transliterated part of string
+        result = []
+        for i in range(len(rest_part)):
+            symbol = rest_part[i]
+            if symbol not in match_table: # Skip non-letter characters
+                prefix += symbol
+            else:
+                for next_symbol in match_table[symbol]:
+                    # "fork" for letters with multiple transliterations
+                    result.extend(translit_recursive(prefix+next_symbol, rest_part[i+1:]))
+                return result
+        return [prefix]
+              </pre>
+            </code>
+          </article>
+        </section>
+        <!-- Experience -->
+        <section>
+          <h2>Профессиональный путь</h2>
+          <ul>
+            <li><time>2018</time> - Закончил физмат лицей при МИФИ</li>
+            <li><time>2018</time> - Поступил в Университет ИТМО на специальность 
+              Программирование и интернет-технологии</li>
+            <li><time>2019</time> - Поучаствовал в финале олимпиады НТИ по направлению 
+              “Прикладной искусственный интеллект”</li>
+            <li><time>2020</time> - Принят на стажировку по направлению Python в ИнфоТеКС</li>
+            <li><time>2020</time> - Устроился в ИнфоТеКС младшим web-разработчиком (Django + Angular)</li>
+          </ul>
+        </section>
+        <!-- Memes -->
+        <section>
+          <h3>Я по жизни :)</h3>
+          <div>
+            <blockquote cite="https://citaty.info/quote/452026">Зачем нужна вселенная, в которой нет чуда?
+            © Смешарики</blockquote>
+          </div>
+          <div><pre>
+████████████████████████████████████████
+███████████░─██████████████████████▒████
+███████████─░─███████████████████▓░──▓██
+██████████▓─░░─████████████████▒░─░─░▒██
+██████████░─░░─░█████████████░─░─░░░─░██
+██████████─░░░░░───░░▒▒▒▓██▒──▒─▒█▓░─░██
+██████████░─░░░░░░░░░░░░░░░─░▒░░██▒─░░██
+███████▓░─░░░░░░░░░░░░░░░░░─█░─░█░──░─██
+█████▓░░░░░░░░░░░░░░░░░░░░░─▒▒░▓──░░─░██
+████───────░░░░░░░░░░░░░░░░░──░██▒▒─░███
+███───░██▓░─░░░░░░───────░░░░░──░█░─░███
+██▒─░─█░██▓─░░░░░─░▓██▓─░░░░░░░░──░─████
+██─░░─░▒██─░░░░░─██▒████─░░░░░░░░░░░▒▒██
+█▒─░░──────░░░░░─▒▓░██▓░─░░░░░░░░░░░░░░█
+█░───░█▓───░░░░░────────░░░░░░░░░░░░░░░█
+░──▒██████▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+───▓███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+─░░─░████▒─░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+──▒█──█▒──░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+░──█████▒░░░░░░░▒▒░░░░░░░░░░░░░░░░░░░░░█
+▒─░─░████████▓▒▒▒▒░░░░░░░░░░░░░░░░░░░░░█
+█──░─░▒░──░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+█▓─░░─░▒▒▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░█
+██▒─░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+███▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+███─░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+████████████████████████████████████████
+          </pre></div>
+        </section>
+      </main>
+  </body>
+</html>
