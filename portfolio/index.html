@@ -8,124 +8,153 @@
 
   <body>
       <header>
-        <img src="images/my_photo.jpg" alt="Это я" width="200px" height="200px">
-        <h1>Иван Ангелов</h1>
-        <h4>Junior Web-разработчик, студент 3 курса</h4>
+        <div id="header-vert-line"></div>
+        <div>
+          <div id="my-photo-container">
+            <img src="images/my_photo.jpg" id="my-photo" alt="Это я" width="200px" height="200px" class="round">
+            <svg viewBox="0 0 170 170" width="170" height="170">
+              <circle cx="85" cy="85" r="85"></circle>
+            </svg>
+          </div>
+          <div id="name-block">
+            <svg viewBox="0 0 120 120" width="120" height="120">
+              <circle cx="60" cy="60" r="60"></circle>
+            </svg>
+            <div id="name-block-headers">
+              <h1 class="dark-text">Иван Ангелов</h1>
+              <h4 class="violet-text">Junior Web-разработчик, студент 3 курса</h4>
+            </div>
+          </div>
+        </div>
         <aside>
           <a href="https://t.me/ange1of">
-            <img src="images/contacts_telegram.png" alt="Telegram" width="30px" height="30px">
+            <img src="images/contacts_telegram.png" alt="Telegram" width="30px" height="30px" class="round">
           </a>
-          <a href="https://vk.com/ange1of">
-            <img src="images/contacts_vk.png" alt="VK" width="30px" height="30px">
+          <a href="https://vk.com/ange1of" class="contact-link">
+            <img src="images/contacts_vk.png" alt="VK" width="30px" height="30px" class="round">
           </a>
-          <a href="https://github.com/ange1of">
-            <img src="images/contacts_github.png" alt="Github" width="30px" height="30px">
+          <a href="https://github.com/ange1of" class="contact-link">
+            <img src="images/contacts_github.png" alt="Github" width="30px" height="30px" class="round">
           </a>
-          <a href="https://www.linkedin.com/in/ivan-angelov-5674671b5/">
-            <img src="images/contacts_linkedin.png" alt="LinkedIn" width="30px" height="30px">
+          <a href="https://www.linkedin.com/in/ivan-angelov-5674671b5/" class="contact-link">
+            <img src="images/contacts_linkedin.png" alt="LinkedIn" width="30px" height="30px" class="round">
           </a>
+          <hr/>
         </aside>
       </header>
       <main>
         <!-- Skills -->
-        <section>
-          <h2>Знания и навыки</h2>
-          <ul>
-            <li>
-              <p>
-                Web: HTML, CSS, JavaScript, клиент-серверное взаимодействие. 
-                Другие языки программирования: С#, Python, С++.
-              </p>
-            </li>
-            <li>
-              <p>Знаком с фреймворками React, Angular, Svelte, Express.
-                На базовом уровне разбираюсь в методологии БЭМ.
-              </p>
-            </li>
-            <li>
-              <p>Работал с базами данных Postgres, MS SQL, sqlite. 
-                А также с docker, немного с микросервисами и СМЭВ (госуслугами).
-              </p>
-            </li>
-            <li>
-              <p>Знаю принципы и паттерны проектирования.</p>
-            </li>
-          </ul>
-        </section>
-        <!-- Code -->
-        <section>
-          <h3>Пример моего кода</h3>
-          <article>
-            <code>
+        <section id="skills-and-code">
+          <article id="skills">
+            <h2>Знания и навыки</h2>
+            <ul>
+              <li>
+                <p>
+                  Web: HTML, CSS, JavaScript, клиент-серверное взаимодействие. 
+                  Другие языки программирования: С#, Python, С++.
+                </p>
+              </li>
+              <li>
+                <p>Знаком с фреймворками React, Angular, Svelte, Express.
+                  На базовом уровне разбираюсь в методологии БЭМ.
+                </p>
+              </li>
+              <li>
+                <p>Работал с базами данных Postgres, MS SQL, sqlite. 
+                  А также с docker, немного с микросервисами и СМЭВ (госуслугами).
+                </p>
+              </li>
+              <li>
+                <p>Знаю принципы и паттерны проектирования.</p>
+              </li>
+            </ul>
+          </article>
+          <!-- Code -->
+          <article id="code-block">
+            <h3 class="dark-text">Пример моего кода</h3>
+            <code class="light-text">
               <pre>
-                def translit_recursive(prefix, rest_part):
-        # prefix - transliterated part of string
-        result = []
-        for i in range(len(rest_part)):
-            symbol = rest_part[i]
-            if symbol not in match_table: # Skip non-letter characters
-                prefix += symbol
-            else:
-                for next_symbol in match_table[symbol]:
-                    # "fork" for letters with multiple transliterations
-                    result.extend(translit_recursive(prefix+next_symbol, rest_part[i+1:]))
-                return result
-        return [prefix]
-              </pre>
+def translit_recursive(prefix, rest_part):
+  # prefix - transliterated part of string
+  result = []
+  for i in range(len(rest_part)):
+    symbol = rest_part[i]
+    if symbol not in match_table: # Skip non-letter characters
+        prefix += symbol
+    else:
+        for next_symbol in match_table[symbol]:
+            # "fork" for letters with multiple transliterations
+            result.extend(
+              translit_recursive(prefix+next_symbol, rest_part[i+1:])
+            )
+        return result
+  return [prefix]</pre>
             </code>
           </article>
         </section>
         <!-- Experience -->
-        <section>
-          <h2>Профессиональный путь</h2>
+        <section id="experience">
+          <div id="experience-vert-line"></div>
+          <div id="experience-header">
+            <svg width="36" height="36">
+              <circle cx="18" cy="18" r="18"></circle>
+            </svg>
+            <h2>Профессиональный путь</h2>
+          </div>
           <ul>
-            <li><time>2018</time> - Закончил физмат лицей при МИФИ</li>
-            <li><time>2018</time> - Поступил в Университет ИТМО на специальность 
-              Программирование и интернет-технологии</li>
-            <li><time>2019</time> - Поучаствовал в финале олимпиады НТИ по направлению 
-              “Прикладной искусственный интеллект”</li>
-            <li><time>2020</time> - Принят на стажировку по направлению Python в ИнфоТеКС</li>
-            <li><time>2020</time> - Устроился в ИнфоТеКС младшим web-разработчиком (Django + Angular)</li>
+            <li>
+              <p><time>2018</time> - Закончил физмат лицей при МИФИ</p>
+            </li>
+            <li>
+              <p><time>2018</time> - Поступил в Университет ИТМО на специальность 
+                Программирование и интернет-технологии</p>
+            </li>
+            <li>
+              <p><time>2019</time> - Поучаствовал в финале олимпиады НТИ по направлению 
+              “Прикладной искусственный интеллект”</p>
+            </li>
+            <li>
+              <p><time>2020</time> - Принят на стажировку по направлению Python в ИнфоТеКС</p>
+            </li>
+            <li>
+              <p><time>2020</time> - Устроился в ИнфоТеКС младшим web-разработчиком (Django + Angular)</p>
+            </li>
           </ul>
         </section>
         <!-- Memes -->
-        <section>
-          <h3>Я по жизни :)</h3>
-          <div>
-            <blockquote cite="https://citaty.info/quote/452026">Зачем нужна вселенная, в которой нет чуда?
-            © Смешарики</blockquote>
+        <section id="memes">
+          <h3 class="light-text underlined">Я по жизни :)</h3>
+          <div id="blockquote-block">
+            <blockquote cite="https://citaty.info/quote/452026" class="dark-text">
+              <p class="underlined">Зачем нужна вселенная, в которой нет чуда?<br/>© Смешарики</p>
+            </blockquote>
+            <svg width="60" height="40">
+              <polygon points="0,0 25,0 60,40"></polygon>
+            </svg>
           </div>
-          <div><pre>
-████████████████████████████████████████
-███████████░─██████████████████████▒████
-███████████─░─███████████████████▓░──▓██
-██████████▓─░░─████████████████▒░─░─░▒██
-██████████░─░░─░█████████████░─░─░░░─░██
-██████████─░░░░░───░░▒▒▒▓██▒──▒─▒█▓░─░██
-██████████░─░░░░░░░░░░░░░░░─░▒░░██▒─░░██
-███████▓░─░░░░░░░░░░░░░░░░░─█░─░█░──░─██
-█████▓░░░░░░░░░░░░░░░░░░░░░─▒▒░▓──░░─░██
-████───────░░░░░░░░░░░░░░░░░──░██▒▒─░███
-███───░██▓░─░░░░░░───────░░░░░──░█░─░███
-██▒─░─█░██▓─░░░░░─░▓██▓─░░░░░░░░──░─████
-██─░░─░▒██─░░░░░─██▒████─░░░░░░░░░░░▒▒██
-█▒─░░──────░░░░░─▒▓░██▓░─░░░░░░░░░░░░░░█
-█░───░█▓───░░░░░────────░░░░░░░░░░░░░░░█
-░──▒██████▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
-───▓███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
-─░░─░████▒─░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
-──▒█──█▒──░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
-░──█████▒░░░░░░░▒▒░░░░░░░░░░░░░░░░░░░░░█
-▒─░─░████████▓▒▒▒▒░░░░░░░░░░░░░░░░░░░░░█
-█──░─░▒░──░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
-█▓─░░─░▒▒▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░█
-██▒─░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
-███▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
-███─░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
-██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
-████████████████████████████████████████
-          </pre></div>
+          <div id="doge">
+            <pre>
+          ▄              ▄    
+          ▌▒█           ▄▀▒▌   
+          ▌▒▒█        ▄▀▒▒▒▐   
+         ▐▄█▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐   
+       ▄▄▀▒▒▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐   
+     ▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌   
+    ▐▒▒▒▄▄▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄▒▌  
+    ▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐  
+   ▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄▌ 
+   ▌░▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒▌ 
+  ▌▒▒▒▄██▄▒▒▒▒▒▒▒▒░░░░░░░░▒▒▒▐ 
+  ▐▒▒▐▄█▄█▌▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▒▒▌
+  ▐▒▒▐▀▐▀▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▐ 
+   ▌▒▒▀▄▄▄▄▄▄▀▒▒▒▒▒▒▒░▒░▒░▒▒▒▌ 
+   ▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒▒▄▒▒▐  
+    ▀▄▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒▄▒▒▒▒▌  
+      ▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀   
+        ▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀     
+           ▀▀▀▀▀▀▀▀▀▀▀▀        
+            </pre>
+          </div>
         </section>
       </main>
   </body>
