@@ -347,3 +347,62 @@ aside > a > img {
         display: none;
     }
 }
+
+@media (max-width: 885px) {
+    #skills-and-code {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-left: 4px solid var(--violet-color);
+        padding: 0 0 1rem 0;
+        margin: 0 1.5rem;
+    }
+
+    #code-block {
+        position: relative;
+    }
+
+    #code-block > svg {
+        bottom: -4.5rem;
+    }
+
+    #skills {
+        border: none;
+    }
+}
+
+@media (max-width: 845px) {
+    #name-block-headers > h4 {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 780px) {
+    html {
+        font-size: 16px;
+    }
+
+    header {
+        display: block;
+    }
+
+    header:nth-child(2) {
+        width: 100%;
+    }
+
+    aside {
+        vertical-align: top;
+        position: absolute;
+        height: fit-content;
+        margin-top: -1rem;
+    }
+
+    aside > a > img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    #name-block > svg {
+        height: 100%;
+    }
+}
