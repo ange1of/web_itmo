@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'Prompt Regular';
+    src: url('fonts/Prompt-Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono Regular';
+    src: url('fonts/JetBrainsMono-Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
 :root {
     --light-blue-color: #E5E9F3;
     --dark-blue-color: #344960;
@@ -14,12 +28,43 @@ body {
     margin: 0;
     width: 100%;
     background-color: var(--light-blue-color);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0.7rem 0;
 }
 
 h2, h3, h4, div, pre {
     width: fit-content;
 }
 
+h2, .underlined {
+    padding-bottom: 5px;
+    border-bottom: 4px solid var(--orange-color);
+}
+
+.light-text {
+    color: var(--light-blue-color);
+}
+
+.dark-text {
+    color: var(--dark-blue-color);
+}
+
+.violet-text {
+    color: var(--violet-color);
+}
+
+.round {
+    border-radius: 50%;
+}
+
+/* Header */
 header {
     display: grid;
     grid-template-columns: 9fr 3fr;
@@ -33,14 +78,57 @@ header > div:nth-child(2) {
     width: 100%;
 }
 
-a {
-    text-decoration: none;
+#header-vert-line {
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    vertical-align: bottom;
+    border-left: 4px solid var(--violet-color);
 }
 
-p {
-    margin: 0.7rem 0;
+/* Logo */
+#my-photo {
+    width: 150px;
+    height: 150px;
+    margin: 10px 20px;
+    position: absolute;
 }
 
+#my-photo-container > svg > circle {
+    fill: var(--violet-color);
+}
+
+/* Name block */
+#name-block {
+    box-shadow: inset 0 -4px 0 0 var(--orange-color);
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    padding: 0;
+    width: 100%;
+}
+
+#name-block-headers > h1 {
+    margin-left: -55px;
+    margin-bottom: 0.3rem;
+}
+
+#name-block-headers > h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0.5em;
+    margin-left: 3rem;
+}
+
+#name-block > svg {
+    margin-left: -55px;
+}
+
+#name-block > svg > circle {
+    fill: var(--orange-color);
+}
+
+/* Contacts */
 aside {
     display: flex;
     flex-wrap: wrap;
@@ -67,83 +155,17 @@ aside > a > img {
     height: 3rem;
 }
 
-h2, .underlined {
-    padding-bottom: 5px;
-    border-bottom: 4px solid var(--orange-color);
+
+/* Skills and Code */
+#skills-and-code {
+    width: 100%;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
 }
 
-.light-text {
-    color: var(--light-blue-color);
-}
-
-.dark-text {
-    color: var(--dark-blue-color);
-}
-
-.violet-text {
-    color: var(--violet-color);
-}
-
-.round {
-    border-radius: 50%;
-}
-
-#header-vert-line {
-    position: absolute;
-    bottom: 0;
-    height: 50%;
-    vertical-align: bottom;
-    border-left: 4px solid var(--violet-color);
-}
-
-#experience {
-    background-color: var(--dark-blue-color);
-    color: var(--light-blue-color);
-    overflow: hidden;
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-#experience-vert-line {
-    height: 90%;
-    vertical-align: top;
-    border-left: 4px solid var(--violet-color);
-    position: absolute;
-}
-
-#experience > ul {
-    list-style: none;
-    padding-left: 0;
-    margin-left: -10px;
-}
-
-#experience > ul > li {
-    display: flex;
-    align-items: center;
-}
-
-#experience > ul > li:before {
-    content: url('images/violet_marker.svg');
-    margin: auto 1rem auto 0;
-    width: 24px;
-    height: 24px;
-}
-
-#experience-header {
-    display: inline-flex;
-    align-items: center;
-    justify-items: flex-start;
-    margin-left: -16px;
-}
-
-#experience-header > h2 {
-    margin-left: 2rem;
-}
-
-#experience-header > svg > circle {
-    fill: var(--violet-color);
-}
-
+/* Skills */
 #skills {
     display: inline-flex;
     flex-direction: column;
@@ -174,64 +196,7 @@ h2, .underlined {
     height: 24px; 
 }
 
-#skills-and-code {
-    width: 100%;
-    padding: 0 1.5rem;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 7fr 5fr;
-}
-
-#memes {
-    background-color: var(--dark-blue-color);
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    row-gap: 1rem;
-    column-gap: 0.5rem;
-}
-
-#memes > h3 {
-    margin: 0 auto;
-    grid-column: 1 / -1;
-}
-
-#doge {
-    background-color: var(--light-blue-color);
-    grid-column: 6 / 9;
-    color: var(--dark-blue-color);
-    margin-bottom: 1rem;
-}
-
-#doge > pre {
-    margin: 0;
-}
-
-#blockquote-block {
-    grid-column: 2 / 6;
-    height: fit-content;
-    margin: auto 0;
-    padding-bottom: 5rem;
-}
-
-#blockquote-block > blockquote > p {
-    text-align: right;
-    margin: 0;
-}
-
-#blockquote-block > svg {
-    float: right;
-    fill: var(--light-blue-color);
-}
-
-#blockquote-block > blockquote {
-    background-color: var(--light-blue-color);
-    padding: 1rem;
-    border-radius: 1rem;
-    height: fit-content;
-    margin: 0 auto;
-}
-
+/* Code */
 #code-block {
     display: inline-flex;
     flex-direction: column;
@@ -248,55 +213,116 @@ h2, .underlined {
     margin: 0;
 }
 
-#my-photo {
-    width: 150px;
-    height: 150px;
-    margin: 10px 20px;
+#code-block > svg {
     position: absolute;
+    right: -100px;
+    bottom: -10px;
+    z-index: -1;
+    margin-bottom: 1rem;
 }
 
-#my-photo-container > svg > circle {
+#code-block > svg > circle {
+    fill: var(--orange-color);
+}
+
+/* Experience */
+#experience {
+    background-color: var(--dark-blue-color);
+    color: var(--light-blue-color);
+    overflow: hidden;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+#experience-header {
+    display: inline-flex;
+    align-items: center;
+    justify-items: flex-start;
+    margin-left: -16px;
+}
+
+#experience-header > h2 {
+    margin-left: 2rem;
+}
+
+#experience-header > svg > circle {
     fill: var(--violet-color);
 }
 
-#name-block > svg > circle {
-    fill: var(--orange-color);
-}
-#name-block > svg {
-    margin-left: -55px;
+#experience-vert-line {
+    height: 90%;
+    vertical-align: top;
+    border-left: 4px solid var(--violet-color);
+    position: absolute;
 }
 
-#name-block {
-    box-shadow: inset 0 -4px 0 0 var(--orange-color);
+#experience > ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: -10px;
+}
+
+#experience > ul > li {
     display: flex;
     align-items: center;
-    height: fit-content;
-    padding: 0;
+}
+
+#experience > ul > li:before {
+    content: url('images/violet_marker.svg');
+    margin: auto 1rem auto 0;
+    width: 24px;
+    height: 24px;
+}
+
+/* Memes */
+#memes {
+    background-color: var(--dark-blue-color);
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 1rem;
+    column-gap: 0.5rem;
 }
 
-#name-block-headers > h4 {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-bottom: 0.5em;
-    margin-left: 3rem;
+#memes > h3 {
+    margin: 0 auto;
+    grid-column: 1 / -1;
 }
 
-#name-block-headers > h1 {
-    margin-left: -55px;
-    margin-bottom: 0.3rem;
+/* Doge */
+#doge {
+    background-color: var(--light-blue-color);
+    grid-column: 6 / 9;
+    color: var(--dark-blue-color);
+    margin-bottom: 1rem;
 }
 
-@font-face {
-    font-family: 'Prompt Regular';
-    src: url('fonts/Prompt-Regular.ttf');
-    font-style: normal;
-    font-weight: normal;
+#doge > pre {
+    margin: 0;
 }
 
-@font-face {
-    font-family: 'JetBrains Mono Regular';
-    src: url('fonts/JetBrainsMono-Regular.ttf');
-    font-style: normal;
-    font-weight: normal;
+/* Blockquote */
+#blockquote-block {
+    grid-column: 2 / 6;
+    height: fit-content;
+    margin: auto 0;
+    padding-bottom: 5rem;
+}
+
+#blockquote-block > blockquote {
+    background-color: var(--light-blue-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+#blockquote-block > blockquote > p {
+    text-align: right;
+    margin: 0;
+}
+
+#blockquote-block > svg {
+    float: right;
+    fill: var(--light-blue-color);
 }
