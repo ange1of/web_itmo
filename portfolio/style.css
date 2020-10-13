@@ -7,6 +7,7 @@
 
 html {
     font-size: 18px;
+    font-family: 'Prompt Regular', 'Arial', sans-serif;
 }
 
 body {
@@ -153,6 +154,7 @@ h2, .underlined {
 
 #skills > ul {
     padding-left: 0;
+    padding-right: 1rem;
     margin-left: -14px;
     margin-top: 0;
 }
@@ -280,3 +282,9 @@ h2, .underlined {
     margin-bottom: 0.5rem;
 }
 
+@font-face {
+    font-family: 'Prompt Regular';
+    src: url('fonts/Prompt-Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
