@@ -23,7 +23,7 @@ h2, h3, h4, div, pre {
 header {
     display: grid;
     grid-template-columns: 9fr 3fr;
-    margin: 0.8rem 1rem 0 1rem;
+    margin: 0.8rem 1rem 0 1.5rem;
     position: relative;
 }
 
@@ -35,6 +35,10 @@ header > div:nth-child(2) {
 
 a {
     text-decoration: none;
+}
+
+p {
+    margin: 0.7rem 0;
 }
 
 aside {
@@ -97,7 +101,7 @@ h2, .underlined {
     color: var(--light-blue-color);
     overflow: hidden;
     position: relative;
-    padding-left: 1rem;
+    padding-left: 1.5rem;
 }
 
 #experience-vert-line {
@@ -172,7 +176,7 @@ h2, .underlined {
 
 #skills-and-code {
     width: 100%;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 7fr 5fr;
