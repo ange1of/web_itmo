@@ -1,0 +1,42 @@
+:root {
+    --light-blue-color: #E5E9F3;
+    --dark-blue-color: #344960;
+    --orange-color: #E97E22;
+    --violet-color: #6180C0; 
+}
+
+#popup-shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contacts-div {
+    z-index: 101;
+    display: none;
+    opacity: 0;
+    width: 40%;
+    height: 50vh;
+    background-color: var(--light-blue-color);
+    border-radius: 20px;
+    transition: opacity 0.2s ease-out 0s;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contacts-div > h3 {
+    justify-self: start;
+    margin-top: 0;
+}
+
+#contacts-div > p {
+    text-align: center;
+}
