@@ -34,12 +34,10 @@ imagePopup.id = 'image-popup';
 
 const prevArrow = document.createElement('div');
 prevArrow.classList.add('change-image-arrow');
-prevArrow.id = 'prev-image-arrow';
 prevArrow.innerHTML = '<span><</span>';
 
 const nextArrow = document.createElement('div');
 nextArrow.classList.add('change-image-arrow');
-nextArrow.id = 'next-image-arrow';
 nextArrow.innerHTML = '<span>></span>';
 
 const imageContainer = document.createElement('div');
@@ -72,7 +70,8 @@ function nextImage(event) {
 }
 nextArrow.onclick = nextImage;
 
-function prevImage() {
+function prevImage(event) {
+    event.stopPropagation();
     imageContainer.removeChild(images[currentImageIndex]);
     if (currentImageIndex == 0) {
         currentImageIndex = images.length - 1;
