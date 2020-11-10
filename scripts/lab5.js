@@ -42,7 +42,11 @@ const sortedArr = quickSort(arr);
 console.log('Sorted array:');
 console.log(JSON.stringify(sortedArr));
 
-const divs = document.querySelectorAll('div');
-const links = document.querySelectorAll('a');
-console.log(`Divs count: ${divs.length}`);
-console.log(`Links count: ${links.length}`);
+const elements = document.querySelectorAll('*');
+const elementsMap = new Map();
+
+elements.forEach(element => elementsMap.set(
+    element.tagName, elementsMap.has(element.tagName) ? elementsMap.get(element.tagName) + 1 : 1
+));
+
+console.log(elementsMap);
