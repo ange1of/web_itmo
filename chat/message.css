@@ -1,0 +1,63 @@
+#message-block {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1.3rem;
+}
+
+.message {
+    background-color: rgb(227, 241, 250);
+    border-radius: 10px;
+    max-width: 80%;
+    position: relative;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+.message::after {
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    background-color: rgb(227, 241, 250);
+    position: absolute;
+    content: '';
+    top: 70%;
+    right: -6px;
+}
+
+.incoming {
+    background-color: rgb(215, 250, 241);
+    align-self: flex-start;
+}
+
+.incoming::after {
+    background-color: rgb(215, 250, 241);
+    left: -6px;
+}
+
+.remove-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.8rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    color: rgb(2, 54, 110);
+}
+.remove-button::before {
+    content: 'x';
+}
+.remove-button:hover {
+    background-color: rgba(220, 220, 220, 0.4);
+}
+
+.message-date {
+    font-size: 0.8rem;
+}
+
+.message-text {
+    width: 100%;
+    word-break: break-all;
+}
