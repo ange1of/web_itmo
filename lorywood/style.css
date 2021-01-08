@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+button {
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('media/main-image.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+header > p {
+    color: #284334;
+    font-size: 1.6rem;
+    position: absolute;
+    text-align: center;
+}
+
+#header_text-left {
+    left: 2.5rem;
+    top: 50vh;
+    width: 18rem;
+}
+
+#header_text-right {
+    right: 2.5rem;
+    top: 32vh;
+    width: 18rem;
+}
+
+#header_white-logo {
+    width: 15%;
+}
+
+#header_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #E2E2E3;
+    opacity: 0.9;
+}
+
+#header_menu > a {
+    margin: 0 1.5rem;
+    font-size: 1.4rem;
+    color: #284334;
+    text-decoration: none;
+}
+
+#header_menu > a:visited {
+    color: #284334;
+}
+
+#header_home-button {
+    background-color: transparent;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    width: 70px;
+    height: 50px;
+    background-image: url('media/green-logo.png');
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#header_menu-button {
+    background-color: transparent;
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-image: url('media/menu-icon.png');
+    background-size: contain;
+    background-position: center;
+}
+
+#header_menu-button:active {
+    animation: kf_menu-button_active 0.3s linear 0s 1 forwards;
+}
+
+@keyframes kf_menu-button_active {
+    to {
+        transform: rotate(180deg);
+    }
+}
