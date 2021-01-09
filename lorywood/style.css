@@ -58,7 +58,7 @@ header > p {
     left: 0;
     height: 70px;
     width: 100%;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: #E2E2E3;
